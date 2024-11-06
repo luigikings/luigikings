@@ -1,4 +1,4 @@
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?color=#1eee31&size=35&center=true&vCenter=true&width=1000&lines=Bienvenido+a+mi+GitHub!;Mi+nombre+es+Luis+Angel+Da+Silva;Soy+Desarrollador+de+Software)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?color=#1EEE31&size=35&center=true&vCenter=true&width=1000&lines=Bienvenido+a+mi+GitHub!;Mi+nombre+es+Luis+Angel+Da+Silva;Soy+Desarrollador+de+Software)](https://git.io/typing-svg)
 
 # 💫 Sobre mi:
 
