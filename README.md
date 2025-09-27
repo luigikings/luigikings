@@ -52,4 +52,4 @@
 ![](https://github-readme-stats.vercel.app/api?username=luigikings&show_icons=true&theme=radical&hide_border=true)  
 ![](https://github-readme-stats.vercel.app/api/top-langs/?username=luigikings&layout=compact&theme=radical&hide_border=true)
 
-![GitHub Streak](https://streak-stats.demolab.com?user=luigikings&theme=radical&hide_border=true)
+![GitHubStreak](https://streak-stats.demolab.com?user=luigikings&theme=radical&hide_border=true)
