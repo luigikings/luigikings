@@ -47,3 +47,8 @@
 ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white) 
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 
+## 📊 GitHub Stats:
+
+![](https://github-readme-stats.vercel.app/api?username=luigikings&show_icons=true&theme=radical&hide_border=true)  
+![](https://github-readme-stats.vercel.app/api/top-langs/?username=luigikings &layout=compact&theme=radical&hide_border=true)
+
