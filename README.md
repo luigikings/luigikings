@@ -6,7 +6,7 @@
 
 # 🔭 Currently working on:
 
-<br>Small personal projects and improving my coding skills<br><br>👯 Experienced with:  <br>Java, MySQL, C++, HTML, JavaScript, C <br><br>⚡ Fun fact:  <br>I love Rocket League 🚀"
+<br>Small personal projects and improving my coding skills<br><br>👯 Experienced with:  <br>Java, MySQL, C++, HTML, JavaScript, C
 
 # 💫 My Learning:
 
