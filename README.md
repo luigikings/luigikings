@@ -8,9 +8,12 @@
 🚀 I recently finished my studies in **Web Application Development (DAW)** and now focus on personal projects where I combine **frontend, backend, and databases** to bring ideas to life.  
 🌍 Always open to **collaborations**, learning new things, and pushing myself to grow as a developer.
 
-# 🔭 Currently working on:
+# 🔭 Currently Working On:
 
-<br>Small personal projects and improving my coding skills<br><br>👯 Experienced with:  <br>Java, MySQL, C++, HTML, JavaScript, C
+- 🌍 **Magnar WarGames**: a Game of Thrones–inspired web app that mixes frontend, backend, and database integration.  
+- 💼 **AgencyMac**: a marketing agency website built with .NET and TailwindCSS.  
+- 🎥 **YouTube Projects**: creating Rocket League content and tutorials to help players improve.  
+- ⚡ Experimenting with **AI tools** to optimize coding workflow and productivity.
 
 # 💫 My Learning:
 
