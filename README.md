@@ -1,11 +1,11 @@
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?color=1EEE31&size=35&center=true&vCenter=true&width=1000&lines=Bienvenido+a+mi+GitHub!;Mi+nombre+es+Luis+Angel+Da+Silva;Soy+Desarrollador+de+Software)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?color=1EEE31&size=35&center=true&vCenter=true&width=1000&lines=Welcome+to+my+GitHub!;My+name+is+Luis+Angel+Da+Silva;Iam+an+Software+Developer)](https://git.io/typing-svg)
 
-# 💫 Sobre mi:
+# 💫 About me:
 
-👋 ¡Hola! Soy Luis Ángel Jose Da Silva 🌐. Apasionado por la programación 💻, el desarrollo web 🌍 y el contenido creativo 🎥. 🚀 Actualmente estudio Desarrollo de Aplicaciones Web (DAW), mientras aprendo y comparto proyectos 🔧. Me encanta combinar mis conocimientos en HTML, CSS, Java, Python y bases de datos 📊 para crear cosas increíbles. 🎮 También soy creador de contenido en YouTube sobre Rocket League, ayudando a la comunidad a mejorar 🚗💨. ¡Siempre dispuesto a colaborar y aprender más!
+👋 Hello! I'm Luis Ángel Jose Da Silva 🌐. Passionate about programming 💻, web development 🌍, and creative content 🎥. 🚀 I'm currently studying Web Application Development (DAW), while learning and sharing projects 🔧. I love combining my knowledge in HTML, CSS, Java, Python, and databases 📊 to create amazing things. 🎮 I'm also a content creator on YouTube about Rocket League, helping the community improve 🚗💨. Always open to collaborate and learn more!
 
-🔭 **Actualmente estoy trabajando en:**  <br>Pequeños proyectos personales y en mejorar en la codificación<br><br>👯 **Estoy aprendiendo:**  <br>JavaScript,MySQL y C#<br><br>💬 **Tengo experiencia en:**  <br>Java, MySQL, C++, HTML, JavaScript, C, <br><br>⚡ **Fun fact:**  <br>Me encanta el Rocket League 🚀
+🔭 **Currently working on:  <br>Small personal projects and improving my coding skills<br><br>👯 Experienced with:  <br>Java, MySQL, C++, HTML, JavaScript, C <br><br>⚡ Fun fact:  <br>I love Rocket League 🚀"
 
-# 💫 Mi Aprendizaje:
+# 💫 My learning:
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![LINUX](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 
