@@ -16,8 +16,8 @@
 - ⚡ Experimenting with **AI tools** to optimize coding workflow and productivity.
 
 ## 🚀 Featured Projects
-- [Magnar WarGames](https://github.com/luigikings/magnarwargames) – Game of Thrones–inspired companion web app.  
-- [AgencyMac](https://github.com/luigikings/agencymac) – Marketing agency website built with .NET & TailwindCSS.
+- [Magnar WarGames](https://github.com/rosehoner/magnarwargames) – Game of Thrones–inspired companion web app.  
+- [AgencyMac](https://github.com/agencymacweb/agencymac) – Marketing agency website built with .NET & TailwindCSS.
 
 # 💫 My Learning:
 
@@ -50,8 +50,6 @@
 ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white) 
 ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white) 
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
-
-
 
 ## 📊 GitHub Stats:
 
