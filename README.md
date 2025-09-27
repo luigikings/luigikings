@@ -17,7 +17,7 @@
 
 ## 🚀 Featured Projects
 - [Magnar WarGames](https://github.com/rosehoner/magnarwargames) – Game of Thrones–inspired companion web app.  
-- [AgencyMac](https://github.com/agencymacweb/agencymac) – Marketing agency website built with .NET & TailwindCSS.
+- [AgencyMac](https://github.com/agencymac/agencymacweb) – Marketing agency website built with .NET & TailwindCSS.
 
 # 💫 My Learning:
 
