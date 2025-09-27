@@ -4,7 +4,7 @@
 
 👋 Hello! I'm Luis Ángel Jose Da Silva 🌐. Passionate about programming 💻, web development 🌍, and creative content 🎥. 🚀 I'm currently studying Web Application Development (DAW), while learning and sharing projects 🔧. I love combining my knowledge in HTML, CSS, Java, Python, and databases 📊 to create amazing things. 🎮 I'm also a content creator on YouTube about Rocket League, helping the community improve 🚗💨. Always open to collaborate and learn more!
 
-🔭 **Currently working on:  <br>Small personal projects and improving my coding skills<br><br>👯 Experienced with:  <br>Java, MySQL, C++, HTML, JavaScript, C <br><br>⚡ Fun fact:  <br>I love Rocket League 🚀"
+# 🔭 **Currently working on:  <br>Small personal projects and improving my coding skills<br><br>👯 Experienced with:  <br>Java, MySQL, C++, HTML, JavaScript, C <br><br>⚡ Fun fact:  <br>I love Rocket League 🚀"
 
 # 💫 My Learning:
 
