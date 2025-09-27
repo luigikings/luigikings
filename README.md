@@ -15,6 +15,10 @@
 - 🎥 **YouTube Projects**: creating Rocket League content and tutorials to help players improve.  
 - ⚡ Experimenting with **AI tools** to optimize coding workflow and productivity.
 
+## 🚀 Featured Projects
+- [Magnar WarGames](https://github.com/luigikings/magnarwargames) – Game of Thrones–inspired companion web app.  
+- [AgencyMac](https://github.com/luigikings/agencymac) – Marketing agency website built with .NET & TailwindCSS.
+
 # 💫 My Learning:
 
 ## 🌐 Frontend
