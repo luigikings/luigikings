@@ -1,11 +1,11 @@
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?color=1EEE31&size=50&height=80&center=true&vCenter=true&width=1000&lines=Welcome+to+my+GitHub!;My+name+is+Luis+Angel+Da+Silva;Iam+a+Software+Developer)](https://git.io/typing-svg)
 
-# 💫 About me:
+# 💫 About Me:
 
 👋 Hi! I'm **Luis Ángel Jose Da Silva**, a passionate **Software Developer** and **content creator**.  
-💻 I enjoy building **web applications** and experimenting with new technologies to improve my skills every day.  
+💻 I enjoy building **web applications** and experimenting with new technologies to keep improving my skills every day.  
 🎮 Outside of coding, I create **Rocket League content on YouTube**, helping players learn and improve while sharing my own journey.  
-🚀 Currently, I'm studying **Web Application Development (DAW)** and working on personal projects where I combine **frontend, backend, and databases** to bring ideas to life.  
+🚀 I recently finished my studies in **Web Application Development (DAW)** and now focus on personal projects where I combine **frontend, backend, and databases** to bring ideas to life.  
 🌍 Always open to **collaborations**, learning new things, and pushing myself to grow as a developer.
 
 # 🔭 Currently working on:
