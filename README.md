@@ -4,7 +4,7 @@
 
 👋 Hi! I'm **Luis Ángel Jose Da Silva**, a passionate **Software Developer** and **content creator**.  
 💻 I enjoy building **web applications** and experimenting with new technologies to keep improving my skills every day.  
-🎮 Outside of coding, I create **Rocket League content on YouTube**, helping players learn and improve while sharing my own journey.  
+🎮 Outside of coding, I create **Rocket League content on YouTube**, helping players learn and improve while sharing my own journey  
 🚀 I recently finished my studies in **Web Application Development (DAW)** and now focus on personal projects where I combine **frontend, backend, and databases** to bring ideas to life.  
 🌍 Always open to **collaborations**, learning new things, and pushing myself to grow as a developer.
 
