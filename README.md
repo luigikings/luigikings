@@ -14,7 +14,7 @@
 
 ## ⚡ About me
 
-<!-- ALT:scoreboard:START --><img src="assets/generated/scoreboard.svg" align="right" width="360" alt="Scoreboard. Goals: 0 repositories. Saves: 0 commits (last year). Assists: 0 PRs, issues &amp; reviews. MVP: — (top language)."><!-- ALT:scoreboard:END -->
+<!-- ALT:scoreboard:START --><img src="assets/generated/scoreboard.svg" align="right" width="360" alt="Scoreboard. Goals: 15 repositories. Saves: 90 commits (last year). Assists: 120 PRs, issues &amp; reviews. MVP: JavaScript (top language)."><!-- ALT:scoreboard:END -->
 
 👋 Hi! I'm **Luis Ángel Jose Da Silva**, a **Software Developer** and **Rocket League content creator**.
 
@@ -67,9 +67,9 @@
 ## 📊 GitHub stats
 
 <p align="center">
-  <!-- ALT:stats:START --><img src="assets/generated/stats.svg" width="390" alt="GitHub stats. Stars: 0. Commits (last year): 0. Pull requests (all time): 0. Issues (all time): 0. Code reviews (all time): 0."><!-- ALT:stats:END -->
-  <!-- ALT:languages:START --><img src="assets/generated/languages.svg" width="390" alt="Top languages: No languages yet."><!-- ALT:languages:END -->
-  <!-- ALT:streak:START --><img src="assets/generated/streak.svg" width="390" alt="Contribution streak. Current streak: 0 days. Longest streak: 0 days. Total contributions: 0."><!-- ALT:streak:END -->
+  <!-- ALT:stats:START --><img src="assets/generated/stats.svg" width="390" alt="GitHub stats. Stars: 5. Commits (last year): 90. Pull requests (all time): 120. Issues (all time): 0. Code reviews (all time): 0."><!-- ALT:stats:END -->
+  <!-- ALT:languages:START --><img src="assets/generated/languages.svg" width="390" alt="Top languages: JavaScript 38.4%, TypeScript 36.5%, Astro 6.4%, Kotlin 6.4%, Java 5.7%, Python 3.6%."><!-- ALT:languages:END -->
+  <!-- ALT:streak:START --><img src="assets/generated/streak.svg" width="390" alt="Contribution streak. Current streak: 7 days. Longest streak: 7 days. Total contributions: 513."><!-- ALT:streak:END -->
 </p>
 <p align="center">
   <picture>
@@ -86,10 +86,16 @@
 
 <!-- YOUTUBE:START -->
 <p align="center">
-  <a href="https://youtube.com/@lk_rl"><img src="assets/static/contact-youtube.svg" width="220" alt="Watch Rocket League videos on YouTube (@lk_rl)"></a>
+  <a href="https://www.youtube.com/watch?v=P8h8zCnhMAM"><img src="https://i.ytimg.com/vi/P8h8zCnhMAM/hqdefault.jpg" width="280" alt="🧨 Rocket League está ROTO 🧨 Hackers están destruyendo el co…"></a>
+  <a href="https://www.youtube.com/watch?v=iwmVMEuBzkw"><img src="https://i.ytimg.com/vi/iwmVMEuBzkw/hqdefault.jpg" width="280" alt="🚀 Cómo hacer Air Dribble en Rocket League"></a>
+  <a href="https://www.youtube.com/watch?v=f91fbnTyNrk"><img src="https://i.ytimg.com/vi/f91fbnTyNrk/hqdefault.jpg" width="280" alt="🔄 Cómo hacer un Flip Reset en Rocket League – Tutorial Paso…"></a>
 </p>
 <p align="center">
-  Rocket League gameplay, tips and tutorials to help you rank up.<br>
+  ▶ <a href="https://www.youtube.com/watch?v=P8h8zCnhMAM">🧨 Rocket League está ROTO 🧨 Hackers están destruyendo el co…</a><br>
+  ▶ <a href="https://www.youtube.com/watch?v=iwmVMEuBzkw">🚀 Cómo hacer Air Dribble en Rocket League</a><br>
+  ▶ <a href="https://www.youtube.com/watch?v=f91fbnTyNrk">🔄 Cómo hacer un Flip Reset en Rocket League – Tutorial Paso…</a>
+</p>
+<p align="center">
   <a href="https://youtube.com/@lk_rl">More videos on the channel →</a>
 </p>
 <!-- YOUTUBE:END -->
