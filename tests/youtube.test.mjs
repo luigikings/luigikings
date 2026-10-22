@@ -289,6 +289,27 @@ test('renderYoutubeSection trunca a 60 y escapa títulos con & < > "', () => {
   assert.ok(!html.includes(' & '));
 });
 
+test('título en español con tildes y "ñ" se conserva tal cual, sin traducir ni corromper (texto y alt; RNF-13, RF-43)', () => {
+  const title = 'Cómo hacer un Flip Reset en España: guía para pequeños y mayores';
+  const raw = { ...VIDEOS.normal, snippet: { ...VIDEOS.normal.snippet, title } };
+  const c = classify(raw);
+  assert.equal(c.eligible, true);
+  assert.equal(c.title, title, 'la clasificación no toca el título');
+  const html = renderYoutubeSection(selectLatest([c], 3), CHANNEL);
+  const shown = truncateTitle(title, 60);
+  assert.ok(shown.startsWith('Cómo hacer un Flip Reset en España: guía para pequeños'));
+  assert.equal(shown, shown.normalize('NFC'));
+  assert.ok(html.includes(`alt="${shown}"`), 'alt con el título en español sin escapar tildes ni ñ');
+  assert.ok(html.includes(`>${shown}</a>`), 'texto visible con el título en español');
+  for (const ch of ['ó', 'ñ', 'í']) assert.ok(html.includes(ch), `conserva ${ch}`);
+  assert.ok(!/&#\d+;|&[a-z]+;/i.test(html.replace(/&amp;|&lt;|&gt;|&quot;|&#39;/g, '')), 'sin entidades HTML para las letras');
+  assert.ok(!html.includes('�') && html === html.toWellFormed(), 'sin caracteres corruptos');
+  // Sin truncar, un título corto en español sale idéntico.
+  const short = 'Cómo hacer Air Dribble — año 2026';
+  const html2 = renderYoutubeSection([{ id: 'normal00001', title: short, publishedAt: '2026-10-20T15:00:00Z' }], CHANNEL);
+  assert.ok(html2.includes(`alt="${short}"`) && html2.includes(`>${short}</a>`));
+});
+
 test('renderYoutubeSection con menos de 3 vídeos no deja huecos ni enlaces rotos', () => {
   const html = renderYoutubeSection(sample().slice(0, 1), CHANNEL);
   assert.equal((html.match(/<img /g) || []).length, 1);

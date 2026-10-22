@@ -5,7 +5,7 @@ import assert from 'node:assert/strict';
 import { readFileSync, existsSync, statSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { PROJECTS, CONTACTS } from '../scripts/build-static.mjs';
-import { STATS_PIECES, STATS_IMAGES, statsMarkers, renderStatsImg, YOUTUBE_START, YOUTUBE_END } from '../scripts/lib/readme.mjs';
+import { STATS_PIECES, STATS_IMAGES, statsMarkers, renderStatsImg, applyStatsAlts, YOUTUBE_START, YOUTUBE_END } from '../scripts/lib/readme.mjs';
 import { buildAltTexts } from '../scripts/lib/alt.mjs';
 import { buildProfileStats } from '../scripts/lib/stats.mjs';
 import { PALETTE, GITHUB_BG, contrastRatio } from '../scripts/lib/palette.mjs';
@@ -108,17 +108,40 @@ test('RF-7 a RF-9: texto animado de demolab con las 4 frases exactas y color por
 
 const SEED_ALTS = buildAltTexts(buildProfileStats({}, new Date('2026-10-22T00:00:00Z'), CFG));
 
-test('RF-65, RF-60: los 4 bloques ALT:* aparecen una vez, en una línea, con el alt inicial de --seed', () => {
+/**
+ * Valida el FORMATO de los 4 bloques ALT:* (no sus valores): las ejecuciones reales del workflow
+ * cambian las cifras, así que el test no puede exigir los valores de --seed.
+ */
+function assertStatsAltBlocks(text, label) {
   for (const p of STATS_PIECES) {
     const { start, end } = statsMarkers(p);
-    assert.equal(count(start), 1, start);
-    assert.equal(count(end), 1, end);
-    const line = README.split(/\r?\n/).find((l) => l.includes(start));
-    assert.ok(line.includes(end), `${p}: START y END en la misma línea`);
-    const block = README.slice(README.indexOf(start) + start.length, README.indexOf(end));
-    assert.equal(block, renderStatsImg({ ...STATS_IMAGES[p], alt: SEED_ALTS[p] }));
+    assert.equal(count(start, text), 1, `${label}: ${start}`);
+    assert.equal(count(end, text), 1, `${label}: ${end}`);
+    const line = text.split(/\r?\n/).find((l) => l.includes(start));
+    assert.ok(line.includes(end) && line.indexOf(start) < line.indexOf(end), `${label} ${p}: START y END en la misma línea`);
+    const block = text.slice(text.indexOf(start) + start.length, text.indexOf(end));
+    const imgs = imgTags(block);
+    assert.equal(imgs.length, 1, `${label} ${p}: una única <img>`);
+    assert.equal(block, imgs[0], `${label} ${p}: el bloque es solo la <img>`);
+    assert.equal(attr(imgs[0], 'src'), STATS_IMAGES[p].src, `${label} ${p}: ruta de assets/generated/`);
+    assert.ok(STATS_IMAGES[p].src.startsWith('assets/generated/'));
     assert.ok(existsSync(ROOT + STATS_IMAGES[p].src), STATS_IMAGES[p].src);
+    const alt = attr(imgs[0], 'alt') ?? '';
+    assert.ok(alt.trim().length > 0, `${label} ${p}: alt no vacío`);
+    // Misma <img> que escribe applyStatsAlts (width, align y escapado), con el alt que tenga.
+    assert.equal(block, renderStatsImg({ ...STATS_IMAGES[p], alt }), `${label} ${p}: formato de renderStatsImg`);
+    // Al menos una cifra. Excepción: languages sin lenguajes usa el texto fijo de buildAltTexts.
+    const emptyLanguages = p === 'languages' && alt === SEED_ALTS.languages;
+    assert.ok(/\d/.test(alt) || emptyLanguages, `${label} ${p}: alt con al menos una cifra: ${alt}`);
   }
+}
+
+test('RF-65, RF-60: los 4 bloques ALT:* del README real tienen el formato correcto (una vez, en una línea, una <img>, alt con cifras)', () => {
+  assertStatsAltBlocks(README, 'README');
+});
+
+test('RF-65, RF-60: el mismo formato vale para el README con los alt iniciales de --seed', () => {
+  assertStatsAltBlocks(applyStatsAlts(README, SEED_ALTS), '--seed');
 });
 
 test('RF-10: el marcador flota a la derecha al principio de About me y el texto va a su lado', () => {
@@ -316,10 +339,36 @@ test('RNF-8: peso total de las piezas propias por tema ≤ 1.5 MB', () => {
   }
 });
 
-test('RF-55, RNF-13: sin "last updated" y texto visible en inglés', () => {
+const SPANISH = ['el', 'la', 'los', 'las', 'que', 'para', 'con', 'una', 'del', 'proyecto', 'proyectos', 'sobre', 'también', 'desarrollador', 'contacto'];
+
+/** README sin el bloque de YouTube: los títulos de vídeo se muestran tal cual (excepción de RNF-7, RNF-13, RF-43). */
+function withoutYoutubeBlock(text) {
+  const from = text.indexOf(YOUTUBE_START);
+  const to = text.indexOf(YOUTUBE_END);
+  assert.ok(from >= 0 && to > from, 'marcadores de YouTube en orden');
+  return text.slice(0, from) + text.slice(to + YOUTUBE_END.length);
+}
+
+/** Texto visible (sin comentarios, etiquetas ni URL) más los alt de las <img>. */
+function visibleWords(text) {
+  const alts = imgTags(text).map((t) => attr(t, 'alt') ?? '').join(' ');
+  const plain = text.replace(/<!--[\s\S]*?-->/g, ' ').replace(/<[^>]+>/g, ' ').replace(/https?:\S+/g, ' ');
+  return `${plain} ${alts}`.toLowerCase().match(/[\p{L}]+/gu) ?? [];
+}
+
+test('RF-55, RNF-13: sin "last updated" y texto visible y alt en inglés (fuera del bloque de YouTube)', () => {
   assert.ok(!/last updated|updated on|actualizado/i.test(README));
-  const text = README.replace(/<!--[\s\S]*?-->/g, ' ').replace(/<[^>]+>/g, ' ').replace(/https?:\S+/g, ' ');
-  const spanish = ['el', 'la', 'los', 'las', 'que', 'para', 'con', 'una', 'del', 'proyecto', 'proyectos', 'sobre', 'también', 'desarrollador', 'contacto'];
-  const words = text.toLowerCase().match(/[\p{L}]+/gu) ?? [];
-  for (const w of spanish) assert.ok(!words.includes(w), `palabra en español: ${w}`);
+  const words = visibleWords(withoutYoutubeBlock(README));
+  for (const w of SPANISH) assert.ok(!words.includes(w), `palabra en español: ${w}`);
+});
+
+test('RNF-13, RF-43: un título de vídeo en español dentro del bloque de YouTube no rompe la comprobación de idioma', () => {
+  const es = 'Cómo hacer el Air Dribble con la caña';
+  const sample = README.replace(YOUTUBE_END, `<a href="https://www.youtube.com/watch?v=abcdefghijk">${es}</a>\n${YOUTUBE_END}`);
+  assert.ok(visibleWords(sample).includes('el'), 'sin excluir el bloque sí se detectaría');
+  const words = visibleWords(withoutYoutubeBlock(sample));
+  for (const w of SPANISH) assert.ok(!words.includes(w), `palabra en español: ${w}`);
+  // Fuera del bloque sí se detecta.
+  const outside = README.replace('## ', `${es}\n\n## `);
+  assert.ok(visibleWords(withoutYoutubeBlock(outside)).includes('el'));
 });
