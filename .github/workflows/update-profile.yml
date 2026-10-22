@@ -1,0 +1,63 @@
+# Actualización automática del perfil (spec 001: RF-50 a RF-58, RNF-11).
+# - Solo se dispara por programación diaria y a mano: nunca por push, así sus propios commits
+#   no la vuelven a lanzar (RF-57). Además, los push hechos con GITHUB_TOKEN no disparan workflows.
+# - La credencial de GitHub (PROFILE_READ_TOKEN) es de solo lectura y solo la ve el paso que lee
+#   los datos; el guardado usa el GITHUB_TOKEN del workflow (RF-56).
+name: Update profile
+
+on:
+  schedule:
+    - cron: "17 5 * * *" # diario a las 05:17 UTC (fuera de la hora en punto, más cargada)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-profile
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      # Exit 0 = ok, 1 = algún grupo falló (lo bueno ya está escrito), 2 = config inválida (no escribe).
+      # No corta el job para que el guardado conserve las piezas correctas (RF-52, RF-53).
+      - id: run
+        name: Regenerate dynamic pieces
+        continue-on-error: true
+        env:
+          PROFILE_READ_TOKEN: ${{ secrets.PROFILE_READ_TOKEN }}
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+        run: node scripts/update.mjs
+
+      - name: Save changes
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/generated README.md
+          if git diff --cached --quiet; then echo "Sin cambios: no hay commit."; exit 0; fi
+          git commit -m "chore: actualizar perfil [bot]"
+          if ! git push origin "HEAD:${GITHUB_REF_NAME}"; then
+            echo "Push rechazado: se integran los cambios remotos y se reintenta una vez."
+            if ! git pull --rebase origin "${GITHUB_REF_NAME}"; then
+              git rebase --abort || true
+              echo "::error::Conflicto al integrar los cambios remotos; no se sobrescribe nada."
+              exit 1
+            fi
+            git push origin "HEAD:${GITHUB_REF_NAME}"
+          fi
+
+      - name: Fail if any piece failed
+        if: steps.run.outputs.failed == 'true' || steps.run.outcome != 'success'
+        run: |
+          echo "::error::La actualización tuvo fallos; se guardaron solo las piezas correctas. Revisa el log del paso 'Regenerate dynamic pieces'."
+          exit 1

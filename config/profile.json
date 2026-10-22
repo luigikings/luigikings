@@ -1,0 +1,15 @@
+{
+  "githubUser": "luigikings",
+  "youtube": {
+    "handle": "@lk_rl",
+    "channelId": "",
+    "count": 3,
+    "shortsMaxSeconds": 180,
+    "titleMaxChars": 60,
+    "premiereMaxGapSeconds": 300
+  },
+  "languages": {
+    "exclude": ["HTML", "CSS", "SCSS", "Sass", "Less", "Markdown", "MDX"],
+    "max": 6
+  }
+}
