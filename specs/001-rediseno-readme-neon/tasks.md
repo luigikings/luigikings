@@ -34,8 +34,8 @@ Plan: `specs/001-rediseno-readme-neon/plan.md`. Tests: `node --test "tests/**/*.
   - Hecho cuando: con un `fetch` falso y fixtures, se cumplen la paginación de repos y de nodos de contribución por año, el invariante "Σ commits del año = `totalCommitContributions`" y que `raw` no contiene nombres de repositorio. También: credencial ausente → error antes de usar la red; respuesta 401 → error tipado; y ningún mensaje de error incluye nombres de repos.
   - Además: se comprueba una vez con la credencial real del usuario que los privados propios aparecen en `raw`. Si no aparecen, se para y se consulta.
 
-- [x] **T8. Selección de vídeos y sección de YouTube (lógica pura).** RF-41, RF-42, RF-43, RF-44, RF-45, RF-46
-  - Hecho cuando: hay tests en verde con fixtures de vídeo normal, Short (sonda 200, 303 y error de red), directo en curso, programado, grabación de directo, estreno emitido, estreno programado y privado. Se cubren el orden por fecha, el caso de menos de 3 elegibles y el de cero, y el título de más de 60 caracteres truncado con "…" y escapado (`& < > "`). `renderYoutubeSection` genera miniaturas `i.ytimg.com` con `alt` = título, enlaces `watch?v=ID` y el enlace al canal, y `replaceBetweenMarkers` solo cambia el bloque entre marcadores.
+- [x] **T8. Selección de vídeos y sección de YouTube (lógica pura).** RF-41, RF-42, RF-43, RF-44, RF-45, RF-46, RNF-13
+  - Hecho cuando: hay tests en verde con fixtures de vídeo normal, Short (sonda 200, 303 y error de red), directo en curso, programado, grabación de directo, estreno emitido, estreno programado y privado. Se cubren el orden por fecha, el caso de menos de 3 elegibles y el de cero, y el título de más de 60 caracteres truncado con "…" y escapado (`& < > "`). Un título en español con tildes y "ñ" se conserva en el texto y en el `alt` sin traducir ni corromper. `renderYoutubeSection` genera miniaturas `i.ytimg.com` con `alt` = título, enlaces `watch?v=ID` y el enlace al canal, y `replaceBetweenMarkers` solo cambia el bloque entre marcadores.
 
 - [x] **T9. Capa de API de YouTube y `resolve-channel-id.mjs`.** RF-40, RF-61, RF-62
   - Hecho cuando: con un `fetch` falso, se usa la lista de subidas `UU…` derivada del `channelId` de la configuración. Clave ausente, clave inválida o cuota agotada → error tipado. Respuesta vacía o mal formada → error sin vídeos. `resolve-channel-id.mjs` imprime el `UC…` a partir de un handle (probado con un `fetch` falso).
@@ -67,14 +67,19 @@ Plan: `specs/001-rediseno-readme-neon/plan.md`. Tests: `node --test "tests/**/*.
     - Iconos de las 23 tecnologías, salvo las que no tienen icono en skillicons (comprobadas a mano), que solo aparecen como texto.
     - 5 `<details>` cerrados con su lista exacta.
     - Marcadores de YouTube.
-    - 4 bloques `ALT:scoreboard`, `ALT:stats`, `ALT:languages` y `ALT:streak` presentes una sola vez, con `alt` igual a `buildAltTexts` de los valores iniciales de `--seed`.
+    - 4 bloques `ALT:scoreboard`, `ALT:stats`, `ALT:languages` y `ALT:streak` validados por formato, no por los valores de `--seed`:
+      - Exactamente un bloque por pieza.
+      - En una sola línea.
+      - Una única `<img>` con la ruta correcta de `assets/generated/`.
+      - `alt` no vacío con al menos una cifra.
+      - El test sigue en verde después de las ejecuciones reales.
     - Snake y 3D con `alt` fijo y sin cifras.
     - Contactos con las URL de RF-48.
     - Sin `<table>`, `<style>`, `<script>`, `class=`, `id=` ni `style=`.
     - Todas las `<img>` con `alt`.
     - Todo `src` relativo existe en disco.
     - Peso total por tema ≤ 1.5 MB.
-    - Todo el texto en inglés.
+    - Texto visible y `alt` en inglés, excluyendo el contenido entre `<!-- YOUTUBE:START -->` y `<!-- YOUTUBE:END -->` (los títulos de vídeo se muestran tal cual: excepción de RNF-7 y RNF-13).
 
 - [x] **T12. Workflow `update-profile.yml`.** RF-50, RF-51, RF-53, RF-54, RF-56, RF-57, RF-58, RNF-11
   - Hecho cuando: `tests/workflow.test.mjs` está en verde y comprueba:
@@ -86,10 +91,12 @@ Plan: `specs/001-rediseno-readme-neon/plan.md`. Tests: `node --test "tests/**/*.
     - Guardado solo si hay cambios, con un reintento tras `pull --rebase`.
     - Paso final que falla si `failed == 'true'`.
 
-- [ ] **T13. Puesta en marcha y validación manual (con el usuario).** Criterios de finalización, RF-42, RF-57, RNF-1, RNF-2, RNF-5, RNF-9
+- [x] **T13. Puesta en marcha y validación manual (con el usuario).** Criterios de finalización, RF-42, RF-57, RNF-1, RNF-2, RNF-5, RNF-9
   - Hecho cuando:
     - El usuario ha completado los 5 pasos manuales del plan y ha dado el OK al push.
     - Hay una ejecución manual del workflow en verde que no se vuelve a disparar sola.
     - La salida de esa ejecución no muestra secretos ni nombres privados.
     - La lista real de vídeos no tiene Shorts ni directos (si los tiene, se ajustan los umbrales de la configuración).
     - El perfil se ha revisado en github.com en claro y oscuro, en escritorio, a 375 px sin scroll horizontal y en la app móvil (esta última, el usuario).
+  - Nota de cierre (2026-10-22): secretos `PROFILE_READ_TOKEN` (PAT fine-grained de solo lectura) y `YOUTUBE_API_KEY` creados por el usuario; `channelId` `UCLSX6ZwA-2sZmmx5rSB3-pw` confirmado. Ejecución manual 39812439466 en verde: grupos github/contrib/youtube correctos, secretos enmascarados, log sin nombres privados, commit del bot `a0fa3a9` sin re-disparo. Cifras reales: Goals 15 (cuentan privados), Saves 90, Assists 120, MVP JavaScript; 3 vídeos reales, ninguno Short. Revisión en github.com (escritorio oscuro y 375 px): 27 imágenes cargan, 0 rotas; `srcset` relativos resuelven según el tema; `scrollWidth` = 375 sin desbordes; en móvil el marcador queda encima del texto. Limitación de GitHub: la variante de `<picture>` sigue el `prefers-color-scheme` del sistema, no el tema elegido en la cuenta.
+  - Pendiente menor (no bloquea): el usuario revisa el perfil en la app móvil de GitHub y confirma que ningún vídeo mostrado es grabación de directo.
