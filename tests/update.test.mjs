@@ -164,8 +164,8 @@ test('falla YouTube: el bloque de YouTube no cambia; los stats y sus alt sí (RF
   }
 });
 
-test('canal sin configurar → youtube: missing-channel (estado actual de config/profile.json)', async () => {
-  const fs = memFs({ cfg: realCfg });
+test('canal sin configurar → youtube: missing-channel', async () => {
+  const fs = memFs({ cfg: { ...realCfg, youtube: { ...realCfg.youtube, channelId: '' } } });
   const res = await runUpdate({ env: ENV, fetch: fakeNet().fetch, now: NOW, fs });
   assert.deepEqual(res.failed, [{ group: 'youtube', code: 'missing-channel' }]);
 });
