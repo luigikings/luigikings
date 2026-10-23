@@ -14,7 +14,7 @@
 
 ## ⚡ About me
 
-<!-- ALT:scoreboard:START --><img src="assets/generated/scoreboard.svg" align="right" width="360" alt="Scoreboard. Goals: 15 repositories. Saves: 90 commits (last year). Assists: 120 PRs, issues &amp; reviews. MVP: JavaScript (top language)."><!-- ALT:scoreboard:END -->
+<!-- ALT:scoreboard:START --><img src="assets/generated/scoreboard.svg" align="right" width="360" alt="Scoreboard. Goals: 15 repositories. Saves: 93 commits (last year). Assists: 120 PRs, issues &amp; reviews. MVP: JavaScript (top language)."><!-- ALT:scoreboard:END -->
 
 👋 Hi! I'm **Luis Ángel Jose Da Silva**, a **Software Developer** and **Rocket League content creator**.
 
@@ -67,9 +67,9 @@
 ## 📊 GitHub stats
 
 <p align="center">
-  <!-- ALT:stats:START --><img src="assets/generated/stats.svg" width="390" alt="GitHub stats. Stars: 5. Commits (last year): 90. Pull requests (all time): 120. Issues (all time): 0. Code reviews (all time): 0."><!-- ALT:stats:END -->
-  <!-- ALT:languages:START --><img src="assets/generated/languages.svg" width="390" alt="Top languages: JavaScript 38.4%, TypeScript 36.5%, Astro 6.4%, Kotlin 6.4%, Java 5.7%, Python 3.6%."><!-- ALT:languages:END -->
-  <!-- ALT:streak:START --><img src="assets/generated/streak.svg" width="390" alt="Contribution streak. Current streak: 7 days. Longest streak: 7 days. Total contributions: 513."><!-- ALT:streak:END -->
+  <!-- ALT:stats:START --><img src="assets/generated/stats.svg" width="390" alt="GitHub stats. Stars: 5. Commits (last year): 93. Pull requests (all time): 120. Issues (all time): 0. Code reviews (all time): 0."><!-- ALT:stats:END -->
+  <!-- ALT:languages:START --><img src="assets/generated/languages.svg" width="390" alt="Top languages: JavaScript 38.5%, TypeScript 36.5%, Astro 6.4%, Kotlin 6.4%, Java 5.7%, Python 3.6%."><!-- ALT:languages:END -->
+  <!-- ALT:streak:START --><img src="assets/generated/streak.svg" width="390" alt="Contribution streak. Current streak: 7 days. Longest streak: 7 days. Total contributions: 516."><!-- ALT:streak:END -->
 </p>
 <p align="center">
   <picture>
