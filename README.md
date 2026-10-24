@@ -69,7 +69,7 @@
 <p align="center">
   <!-- ALT:stats:START --><img src="assets/generated/stats.svg" width="390" alt="GitHub stats. Stars: 5. Commits (last year): 93. Pull requests (all time): 120. Issues (all time): 0. Code reviews (all time): 0."><!-- ALT:stats:END -->
   <!-- ALT:languages:START --><img src="assets/generated/languages.svg" width="390" alt="Top languages: JavaScript 38.5%, TypeScript 36.5%, Astro 6.4%, Kotlin 6.4%, Java 5.7%, Python 3.6%."><!-- ALT:languages:END -->
-  <!-- ALT:streak:START --><img src="assets/generated/streak.svg" width="390" alt="Contribution streak. Current streak: 7 days. Longest streak: 7 days. Total contributions: 516."><!-- ALT:streak:END -->
+  <!-- ALT:streak:START --><img src="assets/generated/streak.svg" width="390" alt="Contribution streak. Current streak: 0 days. Longest streak: 7 days. Total contributions: 516."><!-- ALT:streak:END -->
 </p>
 <p align="center">
   <picture>
