@@ -86,14 +86,14 @@
 
 <!-- YOUTUBE:START -->
 <p align="center">
+  <a href="https://www.youtube.com/watch?v=9cmyyGRT4Qw"><img src="https://i.ytimg.com/vi/9cmyyGRT4Qw/hqdefault.jpg" width="280" alt="🗺️ Cómo JUGAR MAPAS de WORKSHOP en Rocket League 2026 (Steam…"></a>
   <a href="https://www.youtube.com/watch?v=P8h8zCnhMAM"><img src="https://i.ytimg.com/vi/P8h8zCnhMAM/hqdefault.jpg" width="280" alt="🧨 Rocket League está ROTO 🧨 Hackers están destruyendo el co…"></a>
   <a href="https://www.youtube.com/watch?v=iwmVMEuBzkw"><img src="https://i.ytimg.com/vi/iwmVMEuBzkw/hqdefault.jpg" width="280" alt="🚀 Cómo hacer Air Dribble en Rocket League"></a>
-  <a href="https://www.youtube.com/watch?v=f91fbnTyNrk"><img src="https://i.ytimg.com/vi/f91fbnTyNrk/hqdefault.jpg" width="280" alt="🔄 Cómo hacer un Flip Reset en Rocket League – Tutorial Paso…"></a>
 </p>
 <p align="center">
+  ▶ <a href="https://www.youtube.com/watch?v=9cmyyGRT4Qw">🗺️ Cómo JUGAR MAPAS de WORKSHOP en Rocket League 2026 (Steam…</a><br>
   ▶ <a href="https://www.youtube.com/watch?v=P8h8zCnhMAM">🧨 Rocket League está ROTO 🧨 Hackers están destruyendo el co…</a><br>
-  ▶ <a href="https://www.youtube.com/watch?v=iwmVMEuBzkw">🚀 Cómo hacer Air Dribble en Rocket League</a><br>
-  ▶ <a href="https://www.youtube.com/watch?v=f91fbnTyNrk">🔄 Cómo hacer un Flip Reset en Rocket League – Tutorial Paso…</a>
+  ▶ <a href="https://www.youtube.com/watch?v=iwmVMEuBzkw">🚀 Cómo hacer Air Dribble en Rocket League</a>
 </p>
 <p align="center">
   <a href="https://youtube.com/@lk_rl">More videos on the channel →</a>
