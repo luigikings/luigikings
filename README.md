@@ -86,14 +86,14 @@
 
 <!-- YOUTUBE:START -->
 <p align="center">
+  <a href="https://www.youtube.com/watch?v=pcH-Dxfj9UM"><img src="https://i.ytimg.com/vi/pcH-Dxfj9UM/hqdefault.jpg" width="280" alt="🦀 Hice el MODO CARRERA de Rocket League con el PEOR equipo…"></a>
   <a href="https://www.youtube.com/watch?v=FoqDxpUl7tg"><img src="https://i.ytimg.com/vi/FoqDxpUl7tg/hqdefault.jpg" width="280" alt="🌊 Cómo hacer el WAVE DASH en Rocket League (Fácil, en 3 Pas…"></a>
   <a href="https://www.youtube.com/watch?v=9cmyyGRT4Qw"><img src="https://i.ytimg.com/vi/9cmyyGRT4Qw/hqdefault.jpg" width="280" alt="🗺️ Cómo JUGAR MAPAS de WORKSHOP en Rocket League 2026 con Ba…"></a>
-  <a href="https://www.youtube.com/watch?v=P8h8zCnhMAM"><img src="https://i.ytimg.com/vi/P8h8zCnhMAM/hqdefault.jpg" width="280" alt="🧨 Rocket League está ROTO 🧨 Hackers están destruyendo el co…"></a>
 </p>
 <p align="center">
+  ▶ <a href="https://www.youtube.com/watch?v=pcH-Dxfj9UM">🦀 Hice el MODO CARRERA de Rocket League con el PEOR equipo…</a><br>
   ▶ <a href="https://www.youtube.com/watch?v=FoqDxpUl7tg">🌊 Cómo hacer el WAVE DASH en Rocket League (Fácil, en 3 Pas…</a><br>
-  ▶ <a href="https://www.youtube.com/watch?v=9cmyyGRT4Qw">🗺️ Cómo JUGAR MAPAS de WORKSHOP en Rocket League 2026 con Ba…</a><br>
-  ▶ <a href="https://www.youtube.com/watch?v=P8h8zCnhMAM">🧨 Rocket League está ROTO 🧨 Hackers están destruyendo el co…</a>
+  ▶ <a href="https://www.youtube.com/watch?v=9cmyyGRT4Qw">🗺️ Cómo JUGAR MAPAS de WORKSHOP en Rocket League 2026 con Ba…</a>
 </p>
 <p align="center">
   <a href="https://youtube.com/@lk_rl">More videos on the channel →</a>
