@@ -68,7 +68,7 @@
 
 <p align="center">
   <!-- ALT:stats:START --><img src="assets/generated/stats.svg" width="390" alt="GitHub stats. Stars: 5. Commits (last year): 93. Pull requests (all time): 120. Issues (all time): 0. Code reviews (all time): 0."><!-- ALT:stats:END -->
-  <!-- ALT:languages:START --><img src="assets/generated/languages.svg" width="390" alt="Top languages: JavaScript 37.2%, TypeScript 35.3%, Astro 6.2%, Kotlin 6.2%, Java 5.5%, Python 3.5%."><!-- ALT:languages:END -->
+  <!-- ALT:languages:START --><img src="assets/generated/languages.svg" width="390" alt="Top languages: JavaScript 37.1%, TypeScript 35.2%, Astro 6.2%, Kotlin 6.2%, Java 5.5%, Python 3.5%."><!-- ALT:languages:END -->
   <!-- ALT:streak:START --><img src="assets/generated/streak.svg" width="390" alt="Contribution streak. Current streak: 0 days. Longest streak: 7 days. Total contributions: 516."><!-- ALT:streak:END -->
 </p>
 <p align="center">
